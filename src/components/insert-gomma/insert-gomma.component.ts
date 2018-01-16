@@ -2,12 +2,13 @@ import {
     Component,
 } from '@angular/core';
 import {
-    FormControl,
+    FormBuilder,
     FormGroup,
     Validators
 } from '@angular/forms';
 
 import { Gomma } from '../../models';
+import {RestService} from "../../services/rest.service";
 
 @Component({
     selector: 'insert-gomma',
@@ -33,8 +34,8 @@ export class InsertGommaComponent {
 
 
     submit() {
-        this.payload = JSON.stringify(this.formGroup.value, null, 4);
-        this.restService.insertGomma(this.payload).subscribe(data => {
+        this.payload = this.gommaForm.value;
+        this.restService.insertGomma(this.payload).subscribe((data) => {
             this.insertSuccess = true;
         });
     }

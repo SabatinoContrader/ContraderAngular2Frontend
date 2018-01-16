@@ -38,9 +38,16 @@ module.exports = {
             filename: 'index.html',
             inject: 'body',
             template: path.resolve(rootDir, 'src', 'index.html')
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
         })
     ],
     resolve: {
-        extensions: [ '', '.js', '.ts' ]
+        extensions: [ '', '.js', '.ts' ],
+        alias: {
+            jquery: "jquery/src/jquery"
+        }
     }
 };

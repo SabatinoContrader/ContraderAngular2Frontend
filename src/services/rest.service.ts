@@ -11,24 +11,24 @@ import { Gomma } from '../models';
 @Injectable()
 export class RestService {
 
-    baseUrl : String = "http://localhost:8080/gommastore";
+    baseUrl : String = "http://localhost:1200/gommastore/";
 
     constructor(private http: Http) {}
 
     getListaGomme() {
-        return this.http.get( baseUrl + 'gomme/all')
+        return this.http.get( this.baseUrl + 'gomme/allgomme')
                 .map((response) => {
                     const json = response.json();
                     if (response.ok) {
-                        return json.data.data as Gomma[];
+                        return json.data as Gomma[];
                     } else {
                         return this.logError(json);
                     }
                 });
     }
 
-    insertGomma(gomma: Gomma) {
-        return this.http.post( baseUrl + 'gomme/new', gomma)
+    insertGomma(gomma: String) {
+        return this.http.post( this.baseUrl + 'gomme/insertGomme', gomma)
                 .map((response) => {
                     const json = response.json();
                     if (response.ok) {

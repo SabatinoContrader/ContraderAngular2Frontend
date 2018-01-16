@@ -4,9 +4,8 @@ import {
     Routes
 } from '@angular/router';
 
-import { Navbar } from './components/navbar/navbar.component';
 import { GommaListComponent } from './components/gomma-list/gomma-list.component';
-import { InsertGommaComponent } from './components/form-viewer/insert-gomma.component';
+import { InsertGommaComponent } from './components/insert-gomma/insert-gomma.component';
 
 const appRoutes: Routes = [
     {

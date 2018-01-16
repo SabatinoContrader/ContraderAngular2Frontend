@@ -1,4 +1,5 @@
 import 'es6-shim';
+import 'jquery';
 
 import 'reflect-metadata';
 import 'zone.js/dist/zone';

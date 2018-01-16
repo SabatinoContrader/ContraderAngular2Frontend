@@ -4,22 +4,23 @@ import {
     Routes
 } from '@angular/router';
 
-import { FormListComponent } from './components/form-list/form-list.component';
-import { FormViewerComponent } from './components/form-viewer/form-viewer.component';
+import { Navbar } from './components/navbar/navbar.component';
+import { GommaListComponent } from './components/gomma-list/gomma-list.component';
+import { InsertGommaComponent } from './components/form-viewer/insert-gomma.component';
 
 const appRoutes: Routes = [
     {
-        path: 'forms',
-        component: FormListComponent
+        path: 'gomme',
+        component: GommaListComponent
     },
     {
-        path: 'form/:id',
-        component: FormViewerComponent
+        path: 'newGomma',
+        component: InsertGommaComponent
     },
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/forms'
+        redirectTo: '/gomme'
     }
 ];
 

@@ -1,0 +1,18 @@
+<h2>Inserisci Gomma</h2>
+<form [formGroup]="gommaForm" novalidate>
+  <div class="form-group">
+    <label class="center-block">Model:
+      <input class="form-control" formControlName="model">
+    </label>
+    <label class="center-block">Manufacturer:
+      <input class="form-control" formControlName="manufacturer">
+    </label>
+    <label class="center-block">Price:
+      <input class="form-control" formControlName="price">
+    </label>
+  </div>
+  <input type="submit" value="Invia" />
+</form>
+<div *ngIf="insertSuccess">
+  Gomma inserita con successo!
+</div>

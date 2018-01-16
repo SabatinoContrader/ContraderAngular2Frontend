@@ -1,0 +1,17 @@
+<table border="1" cellpadding="2" cellspacing="0" style="width: 40%">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>manufacturer</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let gomma of gomme">
+            <td>{{ gomma.model }}</td>
+            <td>{{ gomma.manufacturer }}</td>
+            <td>{{ gomma.price }}</td>
+        </tr>
+    </tbody>
+</table>

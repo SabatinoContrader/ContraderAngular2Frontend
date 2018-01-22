@@ -1,18 +1,66 @@
-<h2>Inserisci Gomma</h2>
+<h1 style="text-align: center; margin-bottom: 3%;">Inserisci pneumatico</h1>
+<br>
+<div class="container">
 <form [formGroup]="gommaForm" novalidate>
   <div class="form-group">
-    <label class="center-block">Model:
-      <input class="form-control" formControlName="model">
+    <label class="center-block">Modello:
+      <input type="text" class="form-control" name="model" id="model" placeholder="Inserisci modello" required>
     </label>
-    <label class="center-block">Manufacturer:
-      <input class="form-control" formControlName="manufacturer">
+
+    <label class="center-block">Produttore:
+      <input type="text" class="form-control" name="manufacturer" id="manufacturer" placeholder="Inserisci produttore" required>
+
     </label>
-    <label class="center-block">Price:
-      <input class="form-control" formControlName="price">
+
+    <label class="center-block">Prezzo:
+      <input type="text" class="form-control" name="price" id="price" placeholder="Inserisci prezzo" required>
     </label>
+
+    <label class="center-block">Larghezza:
+      <input type="text" class="form-control" name="width" id="width" placeholder="Inserisci larghezza" required>
+    </label>
+
+    <label class="center-block">Altezza:
+      <input type="text" class="form-control" name="height" id="height" placeholder="Inserisci altezza" required>
+    </label>
+
+    <label class="center-block">Diametro:
+      <input type="text" class="form-control" name="diameter" id="diameter" placeholder="Inserisci diametro" required>
+    </label>
+
+    <label class="center-block">Carico:
+      <input type="text" class="form-control" name="weight" id="weight" placeholder="Inserisci carico" required>
+
+    </label>
+
+    <label class="center-block">Velocità:
+      <input type="text" class="form-control" name="speed" id="speed" placeholder="Inserisci velocità" required>
+    </label>
+
+    <label class="center-block">Tipo Veicolo:
+      <select class="form-control" id="typeVehicle" name="typeVehicle" required>
+        <option value="auto">auto</option>
+        <option value="moto">moto</option>
+        <option value="commerciale">commerciale</option>
+      </select>
+    </label>
+
+    <label class="center-block">Stagione:
+      <select class="form-control" id="season" name="season" required>
+        <option value="invernali">invernali</option>
+        <option value="estive">estive</option>
+        <option value="quattro stagioni">quattro stagioni</option>
+      </select>
+    </label>
+
+    <label class="center-block">Quantity:
+      <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Inserisci quantità" required>
+    </label>
+
   </div>
-  <input type="submit" (click)="submit()" value="Invia" />
+  <input type="submit" (click)="submit()" value="Inserisci" />
 </form>
 <div *ngIf="insertSuccess">
-  Gomma inserita con successo!
+  Pneumatico inserito con successo!
+</div>
 </div>

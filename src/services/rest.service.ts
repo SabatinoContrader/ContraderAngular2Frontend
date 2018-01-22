@@ -11,7 +11,7 @@ import { Gomma } from '../models';
 @Injectable()
 export class RestService {
 
-    baseUrl : String = "http://localhost:1200/gommastore/";
+    baseUrl : String = "http://localhost:8080/gommastore/";
 
     constructor(private http: Http) {}
 
@@ -37,6 +37,18 @@ export class RestService {
                         return this.logError(json);
                     }
                 });
+    }
+
+    getGommaManufacturer() {
+        return this.http.get( this.baseUrl + 'gomme/allgommeManufacturer?manufacturer')
+            .map((response) => {
+                const json = response.json();
+                if (response.ok) {
+                    return json.data as Gomma[];
+                } else {
+                    return this.logError(json);
+                }
+            });
     }
 
     private logError(error: any) {

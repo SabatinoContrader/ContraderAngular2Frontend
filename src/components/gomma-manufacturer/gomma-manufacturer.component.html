@@ -1,0 +1,35 @@
+<table border="1" cellpadding="2" cellspacing="0" style="width: 40%">
+    <thead>
+    <tr>
+        <th>Modello</th>
+        <th>Produttore</th>
+        <th>Prezzo</th>
+        <th>Larghezza</th>
+        <th>Altezza</th>
+        <th>Diametro</th>
+        <th>Peso</th>
+        <th>Velocità</th>
+        <th>Tipo Veicolo</th>
+        <th>Stagione</th>
+        <th>Quantità</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let gomma of gomme">
+        <td>{{ gomma.model }}</td>
+        <td>{{ gomma.manufacturer }}</td>
+        <td>{{ gomma.price }}</td>
+        <td>{{ gomma.width }}</td>
+        <td>{{ gomma.height}}</td>
+        <td>{{ gomma.diameter}}</td>
+        <td>{{ gomma.weight}}</td>
+        <td>{{ gomma.speed}}</td>
+        <td>{{ gomma.typeVehicle}}</td>
+        <td>{{ gomma.season}}</td>
+        <td>{{ gomma.quantity}}</td>
+
+    </tr>
+    </tbody>
+</table>

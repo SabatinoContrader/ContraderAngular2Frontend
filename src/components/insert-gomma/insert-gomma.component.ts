@@ -28,7 +28,15 @@ export class InsertGommaComponent {
         this.gommaForm = this.fb.group({
             model: ['', Validators.required],
             manufacturer:  ['', Validators.required],
-            price:  ['', Validators.required]
+            price:  ['', Validators.required],
+            width: ['', Validators.required],
+            height: ['', Validators.required],
+            diameter: ['', Validators.required],
+            weight: ['', Validators.required],
+            speed: ['', Validators.required],
+            typeVehicle: ['', Validators.required],
+            season: ['', Validators.required],
+            quantity:['', Validators.required]
         });
     }
 

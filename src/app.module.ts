@@ -11,7 +11,8 @@ import {
     AppComponent,
     InsertGommaComponent,
     GommaListComponent,
-    NavbarComponent
+    GommaManufacturerComponent,
+    NavbarComponent, WheelsStoreComponent
 } from './components';
 
 @NgModule({
@@ -20,7 +21,9 @@ import {
         AppComponent,
         NavbarComponent,
         GommaListComponent,
-        InsertGommaComponent
+        GommaManufacturerComponent,
+        InsertGommaComponent,
+        WheelsStoreComponent
     ],
     imports: [
         AppRoutingModule,

@@ -6,7 +6,7 @@ import {
 
 import 'rxjs/add/operator/map';
 
-import { Gomma } from '../models';
+import {Gomma, Vehicle} from '../models';
 
 @Injectable()
 export class RestService {
@@ -39,17 +39,55 @@ export class RestService {
                 });
     }
 
+
     getGommaManufacturer() {
         return this.http.get( this.baseUrl + 'gomme/allgommeManufacturer?manufacturer')
             .map((response) => {
                 const json = response.json();
                 if (response.ok) {
                     return json.data as Gomma[];
+                }else {
+                    return this.logError(json);
+                }
+            });
+    }
+
+    getListaVehicles() {
+        return this.http.get( this.baseUrl + 'vehicle/allvehicles')
+            .map((response) => {
+                const json = response.json();
+                if (response.ok) {
+                    return json.data as Vehicle[];
                 } else {
                     return this.logError(json);
                 }
             });
     }
+    insertVehicle(vehicle: String) {
+        return this.http.post( this.baseUrl + 'vehicle/insertVehicle', vehicle)
+            .map((response) => {
+                const json = response.json();
+                if (response.ok) {
+                    return json.data;
+                } else {
+                    return this.logError(json);
+                }
+            });
+    }
+
+
+    searchVehicle(vehicle: String){
+        return this.http.post(this.baseUrl + 'vehicle/searchVehicle',vehicle)
+            .map((response)=>{
+                const json=response.json();
+                if(response.ok){
+                    return json.data as Gomma[];
+                }else{
+                    return this.logError(json);
+                }
+            });
+    }
+
 
     private logError(error: any) {
         console.error(error.error);

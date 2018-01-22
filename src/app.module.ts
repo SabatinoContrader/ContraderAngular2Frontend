@@ -11,9 +11,17 @@ import {
     AppComponent,
     InsertGommaComponent,
     GommaListComponent,
+
     GommaManufacturerComponent,
-    NavbarComponent, WheelsStoreComponent
+    NavbarComponent,
+        WheelsStoreComponent,
+    VehicleListComponent,
+    InsertVehicleComponent,
+    SearchVehicleComponent
+
 } from './components';
+
+
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -23,8 +31,11 @@ import {
         GommaListComponent,
         GommaManufacturerComponent,
         InsertGommaComponent,
-        WheelsStoreComponent
-    ],
+        WheelsStoreComponent,
+        InsertGommaComponent,
+        VehicleListComponent,
+        InsertVehicleComponent,
+        SearchVehicleComponent],
     imports: [
         AppRoutingModule,
         BrowserModule,

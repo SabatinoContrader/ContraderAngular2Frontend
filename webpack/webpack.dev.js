@@ -19,6 +19,10 @@ module.exports = {
         vendor: [ path.resolve(rootDir, 'src', 'vendor') ]
     },
     module: {
+        rules:[ {
+            test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+            loader: 'file-loader?name=assets/img/[name].[hash].[ext]'
+        }],
         loaders: [
             { loader: 'raw', test: /\.(css|html)$/ },
             { exclude: /node_modules/, loader: 'ts', test: /\.ts$/ }

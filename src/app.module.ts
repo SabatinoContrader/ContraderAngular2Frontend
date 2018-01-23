@@ -14,10 +14,11 @@ import {
 
     GommaManufacturerComponent,
     NavbarComponent,
-        WheelsStoreComponent,
+    WheelsStoreComponent,
     VehicleListComponent,
     InsertVehicleComponent,
-    SearchVehicleComponent
+    SearchVehicleComponent,
+    FooterComponent
 
 } from './components';
 
@@ -35,7 +36,8 @@ import {
         InsertGommaComponent,
         VehicleListComponent,
         InsertVehicleComponent,
-        SearchVehicleComponent],
+        SearchVehicleComponent,
+        FooterComponent],
     imports: [
         AppRoutingModule,
         BrowserModule,

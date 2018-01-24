@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "tslint ./src/**/*.ts",
-    "start": "webpack-dev-server --config ./webpack/webpack.dev.js --port 9000",
+    "start": "webpack --config ./webpack/webpack.dev.js && webpack-dev-server --content-base dist/ --port 9000",
     "test": "karma start ./karma/karma.conf.js",
     "test:headless": "karma start ./karma/karma.conf.js --browsers PhantomJS --autoWatch=true --singleRun=false",
     "test:single": "karma start ./karma/karma.conf.js --browsers PhantomJS"
@@ -32,6 +32,7 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.3.1",
     "html-webpack-plugin": "^2.22.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.0",

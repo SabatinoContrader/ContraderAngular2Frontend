@@ -3,6 +3,7 @@
 const HtmlWebpack = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ChunkWebpack = webpack.optimize.CommonsChunkPlugin;
 
 const rootDir = path.resolve(__dirname, '..');
@@ -20,12 +21,6 @@ module.exports = {
     },
     module: {
         loaders: [
-
-            {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loader: 'file-loader?name=assets/img/[name].[hash].[ext]'
-            },
-
             { loader: 'raw', test: /\.(css|html)$/ },
             { exclude: /node_modules/, loader: 'ts', test: /\.ts$/ }
         ]
@@ -48,7 +43,10 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })
+        }),
+        new CopyWebpackPlugin([
+         {from: path.resolve(rootDir, 'src', 'assets', 'img') ,to: path.resolve(rootDir, 'dist', 'img')}
+     ]),
     ],
     resolve: {
         extensions: [ '', '.js', '.ts' ],

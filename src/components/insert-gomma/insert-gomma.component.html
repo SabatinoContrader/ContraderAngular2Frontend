@@ -1,44 +1,44 @@
 <h1 style="text-align: center; margin-bottom: 3%;">Inserisci pneumatico</h1>
 <br>
 <div class="container">
-<form [formGroup]="gommaForm" novalidate>
+<form [formGroup]="gommaForm" >
   <div class="form-group">
     <label class="center-block">Modello:
-      <input type="text" class="form-control" name="model" id="model" placeholder="Inserisci modello" required>
+      <input type="text" class="form-control" formControlName="model" id="model" placeholder="Inserisci modello" >
     </label>
 
     <label class="center-block">Produttore:
-      <input type="text" class="form-control" name="manufacturer" id="manufacturer" placeholder="Inserisci produttore" required>
+      <input type="text" class="form-control" formControlName="manufacturer" id="manufacturer" placeholder="Inserisci produttore" >
 
     </label>
 
     <label class="center-block">Prezzo:
-      <input type="text" class="form-control" name="price" id="price" placeholder="Inserisci prezzo" required>
+      <input type="text" class="form-control" formControlName="price" id="price" placeholder="Inserisci prezzo" >
     </label>
 
     <label class="center-block">Larghezza:
-      <input type="text" class="form-control" name="width" id="width" placeholder="Inserisci larghezza" required>
+      <input type="text" class="form-control" formControlName="width" id="width" placeholder="Inserisci larghezza" >
     </label>
 
     <label class="center-block">Altezza:
-      <input type="text" class="form-control" name="height" id="height" placeholder="Inserisci altezza" required>
+      <input type="text" class="form-control" formControlName="height" id="height" placeholder="Inserisci altezza" >
     </label>
 
     <label class="center-block">Diametro:
-      <input type="text" class="form-control" name="diameter" id="diameter" placeholder="Inserisci diametro" required>
+      <input type="text" class="form-control" formControlName="diameter" id="diameter" placeholder="Inserisci diametro" >
     </label>
 
     <label class="center-block">Carico:
-      <input type="text" class="form-control" name="weight" id="weight" placeholder="Inserisci carico" required>
+      <input type="text" class="form-control" formControlName="weight" id="weight" placeholder="Inserisci carico" >
 
     </label>
 
     <label class="center-block">Velocità:
-      <input type="text" class="form-control" name="speed" id="speed" placeholder="Inserisci velocità" required>
+      <input type="text" class="form-control" formControlName="speed" id="speed" placeholder="Inserisci velocità" >
     </label>
 
     <label class="center-block">Tipo Veicolo:
-      <select class="form-control" id="typeVehicle" name="typeVehicle" required>
+      <select class="form-control" formControlName="typeVehicle" id="typeVehicle" name="typeVehicle" >
         <option value="auto">auto</option>
         <option value="moto">moto</option>
         <option value="commerciale">commerciale</option>
@@ -46,7 +46,7 @@
     </label>
 
     <label class="center-block">Stagione:
-      <select class="form-control" id="season" name="season" required>
+      <select class="form-control" formControlName="season" id="season" name="season" >
         <option value="invernali">invernali</option>
         <option value="estive">estive</option>
         <option value="quattro stagioni">quattro stagioni</option>
@@ -54,7 +54,7 @@
     </label>
 
     <label class="center-block">Quantity:
-      <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Inserisci quantità" required>
+      <input type="text" class="form-control" formControlName="quantity" name="quantity" id="quantity" placeholder="Inserisci quantità" required>
     </label>
 
   </div>

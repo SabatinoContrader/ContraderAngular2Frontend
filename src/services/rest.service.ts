@@ -27,7 +27,7 @@ export class RestService {
                 });
     }
 
-    insertGomma(gomma: String) {
+    insertGomma(gomma: any) {
         return this.http.post( this.baseUrl + 'gomme/insertGomme', gomma)
                 .map((response) => {
                     const json = response.json();
@@ -39,18 +39,31 @@ export class RestService {
                 });
     }
 
-
-    getGommaManufacturer() {
-        return this.http.get( this.baseUrl + 'gomme/allgommeManufacturer?manufacturer')
-            .map((response) => {
-                const json = response.json();
-                if (response.ok) {
+    allgommeManufacturer(gomma: any){
+        return this.http.get(this.baseUrl + 'gomme/allgommeManufacturer?manufacturer='+gomma.manufacturer+'&typeVehicle='+gomma.typeVehicle)
+            .map((response)=>{
+                const json=response.json();
+                if(response.ok){
                     return json.data as Gomma[];
-                }else {
+                }else{
                     return this.logError(json);
                 }
             });
     }
+
+    gommeForSize(gommaSize: any){
+        return this.http.get(this.baseUrl +'gomme/gommeForSize?width='+gommaSize.width+'&height='+gommaSize.height+'&diameter='+gommaSize.diameter+'&weight='
+        +gommaSize.weight+'&speed='+gommaSize.speed+'&season='+gommaSize.season+'&typeVehicle='+gommaSize.typeVehicle)
+            .map((response)=>{
+                const json=response.json();
+                if(response.ok){
+                    return json.data as Gomma[];
+                }else{
+                    return this.logError(json);
+                }
+            });
+    }
+
 
     getListaVehicles() {
         return this.http.get( this.baseUrl + 'vehicle/allvehicles')

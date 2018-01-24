@@ -19,6 +19,7 @@ export class InsertGommaComponent {
     insertSuccess: boolean = false;
     gommaForm: FormGroup;
     payload: string;
+    gomme: Gomma[];
 
     constructor(private restService: RestService, private fb: FormBuilder) {
       this.createForm()
@@ -43,8 +44,9 @@ export class InsertGommaComponent {
 
     submit() {
         this.payload = this.gommaForm.value;
-        this.restService.insertGomma(this.payload).subscribe((data) => {
+        this.restService.insertGomma(this.payload).subscribe((data: any) => {
             this.insertSuccess = true;
+            this.gomme = data;
         });
     }
 }

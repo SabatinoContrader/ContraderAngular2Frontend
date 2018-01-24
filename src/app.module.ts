@@ -11,16 +11,13 @@ import {
     AppComponent,
     InsertGommaComponent,
     GommaListComponent,
-
-    GommaManufacturerComponent,
     NavbarComponent,
-    WheelsStoreComponent,
     VehicleListComponent,
     InsertVehicleComponent,
     SearchVehicleComponent,
-    FooterComponent
-
-} from './components';
+    FooterComponent,
+    AllgommeManufacturerComponent,
+    GommeForSizeComponent} from './components';
 
 
 
@@ -28,16 +25,15 @@ import {
     bootstrap: [ AppComponent ],
     declarations: [
         AppComponent,
-        NavbarComponent,
+        InsertGommaComponent,
         GommaListComponent,
-        GommaManufacturerComponent,
-        InsertGommaComponent,
-        WheelsStoreComponent,
-        InsertGommaComponent,
+        NavbarComponent,
         VehicleListComponent,
         InsertVehicleComponent,
         SearchVehicleComponent,
-        FooterComponent],
+        FooterComponent,
+        AllgommeManufacturerComponent,
+        GommeForSizeComponent],
     imports: [
         AppRoutingModule,
         BrowserModule,

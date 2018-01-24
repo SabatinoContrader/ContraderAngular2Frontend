@@ -8,7 +8,7 @@ import {
 
 import {
     AllgommeManufacturerComponent,
-    GommaListComponent, GommeForSizeComponent, InsertGommaComponent, InsertUserComponent,/* MenuAdminComponent,*/
+    GommaListComponent, GommeForSizeComponent, InsertGommaComponent, InsertUserComponent, MenuAdminComponent,
     UserListComponent
 } from "./components";
 
@@ -65,10 +65,10 @@ const appRoutes: Routes = [
         component: InsertUserComponent
 
     },
-    /*{
+    {
         path: 'menuAdmin',
         component: MenuAdminComponent
-    },*/
+    },
     {
         path: '',
         pathMatch: 'full',

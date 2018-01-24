@@ -10,5 +10,5 @@ export * from './allgomme-manufacturer/allgomme-manufacturer.component';
 export * from './gomme-for-size/gomme-for-size.component';
 export * from './user-list/user-list.component';
 export * from './insert-user/insert-user.component';
-/*export * from './menu-admin/menu-admin.component';*/
+export * from './menu-admin/menu-admin.component';
 

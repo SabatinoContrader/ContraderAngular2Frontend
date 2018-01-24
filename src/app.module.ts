@@ -20,7 +20,7 @@ import {
     GommeForSizeComponent,
     UserListComponent,
     InsertUserComponent,
-    /*MenuAdminComponent*/
+    MenuAdminComponent
 
 } from './components';
 
@@ -42,7 +42,7 @@ import {
         GommeForSizeComponent,
         UserListComponent,
         InsertUserComponent,
-       /*MenuAdminComponent*/],
+       MenuAdminComponent],
 
     imports: [
         AppRoutingModule,

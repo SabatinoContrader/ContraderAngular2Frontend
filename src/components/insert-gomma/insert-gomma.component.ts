@@ -7,8 +7,9 @@ import {
     Validators
 } from '@angular/forms';
 
-import { Gomma } from '../../models';
+
 import {RestService} from "../../services/rest.service";
+import {Gomma} from "../../models";
 
 @Component({
     selector: 'insert-gomma',

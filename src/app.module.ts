@@ -1,3 +1,4 @@
+///<reference path="components/menu-admin/menu-admin.component.ts"/>
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -15,9 +16,14 @@ import {
     VehicleListComponent,
     InsertVehicleComponent,
     SearchVehicleComponent,
-    FooterComponent,
-    AllgommeManufacturerComponent,
-    GommeForSizeComponent} from './components';
+    FooterComponent, AllgommeManufacturerComponent,
+    GommeForSizeComponent,
+    UserListComponent,
+    InsertUserComponent,
+    /*MenuAdminComponent*/
+
+} from './components';
+
 
 
 
@@ -33,7 +39,11 @@ import {
         SearchVehicleComponent,
         FooterComponent,
         AllgommeManufacturerComponent,
-        GommeForSizeComponent],
+        GommeForSizeComponent,
+        UserListComponent,
+        InsertUserComponent,
+       /*MenuAdminComponent*/],
+
     imports: [
         AppRoutingModule,
         BrowserModule,

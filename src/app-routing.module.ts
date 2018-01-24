@@ -4,7 +4,17 @@ import {
     Routes
 } from '@angular/router';
 
-import { InsertGommaComponent, GommaListComponent, AllgommeManufacturerComponent, GommeForSizeComponent} from "./components";
+
+
+import {
+    AllgommeManufacturerComponent,
+    GommaListComponent, GommeForSizeComponent, InsertGommaComponent, InsertUserComponent,/* MenuAdminComponent,*/
+    UserListComponent
+} from "./components";
+
+
+
+
 
 
 import {InsertVehicleComponent, SearchVehicleComponent, VehicleListComponent} from "./components";
@@ -45,6 +55,20 @@ const appRoutes: Routes = [
         component: SearchVehicleComponent
 
     },
+    {
+        path: 'users',
+        component: UserListComponent
+
+    },
+    {
+        path :'reg',
+        component: InsertUserComponent
+
+    },
+    /*{
+        path: 'menuAdmin',
+        component: MenuAdminComponent
+    },*/
     {
         path: '',
         pathMatch: 'full',

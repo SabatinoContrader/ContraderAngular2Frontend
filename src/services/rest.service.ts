@@ -6,7 +6,7 @@ import {
 
 import 'rxjs/add/operator/map';
 
-import {Gomma, Vehicle} from '../models';
+import {Gomma, User, Vehicle} from '../models';
 
 @Injectable()
 export class RestService {
@@ -96,6 +96,30 @@ export class RestService {
                 if(response.ok){
                     return json.data as Gomma[];
                 }else{
+                    return this.logError(json);
+                }
+            });
+    }
+    getListaUsers(){
+        return this.http.get( this.baseUrl + 'users/getUsers')
+            .map((response) => {
+                const json = response.json();
+                if (response.ok) {
+                    return json.data as User[];
+                } else {
+                    return this.logError(json);
+                }
+            });
+
+    }
+
+    insertUser(user: String) {
+        return this.http.post( this.baseUrl + 'users/newUser', user)
+            .map((response) => {
+                const json = response.json();
+                if (response.ok) {
+                    return json.data;
+                } else {
                     return this.logError(json);
                 }
             });

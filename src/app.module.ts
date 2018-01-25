@@ -16,11 +16,13 @@ import {
     VehicleListComponent,
     InsertVehicleComponent,
     SearchVehicleComponent,
-    FooterComponent, AllgommeManufacturerComponent,
+    FooterComponent,
+    AllgommeManufacturerComponent,
     GommeForSizeComponent,
     UserListComponent,
     InsertUserComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    LoginComponent
 
 } from './components';
 
@@ -42,7 +44,8 @@ import {
         GommeForSizeComponent,
         UserListComponent,
         InsertUserComponent,
-       MenuAdminComponent],
+        MenuAdminComponent,
+        LoginComponent],
 
     imports: [
         AppRoutingModule,

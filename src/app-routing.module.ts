@@ -5,21 +5,15 @@ import {
 } from '@angular/router';
 
 
-
 import {
     AllgommeManufacturerComponent,
     GommaListComponent, GommeForSizeComponent, InsertGommaComponent, InsertUserComponent, MenuAdminComponent,
     UserListComponent
 } from "./components";
 
-
-
-
-
+import {LoginComponent} from "./components";
 
 import {InsertVehicleComponent, SearchVehicleComponent, VehicleListComponent} from "./components";
-
-
 
 
 const appRoutes: Routes = [
@@ -55,6 +49,14 @@ const appRoutes: Routes = [
         component: SearchVehicleComponent
 
     },
+
+    {
+        path: 'login',
+        component: LoginComponent
+
+    },
+
+
     {
         path: 'users',
         component: UserListComponent

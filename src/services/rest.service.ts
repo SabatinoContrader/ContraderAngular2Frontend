@@ -89,6 +89,18 @@ export class RestService {
     }
 
 
+    login(param: any){
+        return this.http.post(this.baseUrl + 'login/menu',param)
+            .map((response)=>{
+                const json=response.json();
+                if(response.ok){
+                    return json;
+                }else{
+                    return this.logError(json);
+                }
+            });
+    }
+
     searchVehicle(vehicle: String){
         return this.http.post(this.baseUrl + 'vehicle/searchVehicle',vehicle)
             .map((response)=>{

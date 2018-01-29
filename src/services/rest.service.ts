@@ -126,14 +126,17 @@ export class RestService {
     }
 
     insertUser(user: String) {
-        return this.http.post( this.baseUrl + 'users/newUser', user)
+        return this.http.post( this.baseUrl + 'login/regControl', user)
             .map((response) => {
                 const json = response.json();
-                if (response.ok) {
-                    return json.data;
-                } else {
-                    return this.logError(json);
+                if (response.ok)
+                {
+                    return json;
                 }
+                else
+                    {
+                        return this.logError(json);
+                    }
             });
     }
 

@@ -7,12 +7,15 @@ import {RestService} from "../../services/rest.service";
     template: require('./insert-user.component.html')
 })
 export class InsertUserComponent{
+
     insertSuccess: boolean=false;
     userForm: FormGroup;
     payload: string;
+    esito: string;
 
-    constructor(private restService: RestService, private fb: FormBuilder) {
-        this.createForm()
+    constructor(private restService: RestService, private fb: FormBuilder)
+    {
+        this.createForm();
     }
     createForm() {
         this.userForm=this.fb.group({
@@ -34,8 +37,13 @@ export class InsertUserComponent{
     }
     submit() {
         this.payload = this.userForm.value;
-        this.restService.insertUser(this.payload).subscribe((data) => {
-            this.insertSuccess = true;
+        this.restService.insertUser(this.payload).subscribe((data) =>
+        {
+            if(data.response==0)
+               this.esito="Utente non registrato"
+            else
+                this.esito="insermento avvenuto";
+            this.insertSuccess =true;
         });
     }
 }
